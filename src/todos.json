@@ -1,0 +1,34 @@
+{
+    "todos":[
+        {
+            "title": "Tarea 1",
+            "responsable": "Felipe",
+            "description": "Junta del Servicio Social",
+            "priority": "High"
+        },
+        {
+            "title": "Tarea 2",
+            "responsable": "Felipe",
+            "description": "Lavar el Ferrari",
+            "priority": "Low"
+        },
+        {
+            "title": "Tarea 3",
+            "responsable": "Felipe",
+            "description": "Cita con Elon Musk",
+            "priority": "Medium"
+        },
+        {
+            "title": "Tarea 4",
+            "responsable": "Felipe",
+            "description": "Viaje a Cancún",
+            "priority": "Super High"
+        },
+        {
+            "title": "Tarea 5",
+            "responsable": "Pedro",
+            "description": "Dormir",
+            "priority": "Super High"
+        }
+    ]
+}
