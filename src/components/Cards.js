@@ -5,19 +5,29 @@ class Cards extends Component{
     constructor(){
         super();
         this.state={
-          todos 
+          todos
         }
     }
     
     removeTodo(index) {
         this.setState({
-        todos:this.state.todos.filter((todo,i) => {
-            return i != index
-        })
+            todos:this.state.todos.filter((todo,i) => {
+                return i != index
+            })
         })
     }
 
-    
+    addTodo(){
+        const title = document.getElementById("nombreInput").value;
+        const description = document.getElementById("descInput").value;
+        const responsable = document.getElementById("respInput").value;
+        const priority = document.getElementById("prioriInput").value;
+        const newTodo = {title,description,responsable,priority}
+        console.log(newTodo)
+        this.setState({
+            todos:this.state.todos.concat([newTodo])
+        })
+    }
 
 
     render(){
@@ -47,9 +57,26 @@ class Cards extends Component{
               <div className="card-header">
                   <h3 className="text-dark">Nueva tarea</h3>
               </div>
-              <div className="card-body">
-                <p><mark>Holi</mark></p>
-                <a href="#" role="button"> {this.props.title} &#10004;</a>
+              
+              <div className="card-body">  
+                <form>
+                    <div className="form-group">
+                        <input type="text" className="form-control" id="nombreInput" placeholder="Nombre"></input>
+                    </div>
+                    <div className="form-group">
+                        <input type="text" className="form-control" id="descInput" placeholder="Descripción"></input>
+                    </div>
+                    <div className="form-group">
+                        <input type="text" className="form-control" id="respInput" placeholder="Responsable"></input>
+                    </div>
+                    <div className="form-group">
+                        <input type="text" className="form-control" id="prioriInput" placeholder="Prioridad"></input>
+                    </div>
+                    <div className="form-group">
+                        <a href="#" onClick={this.addTodo.bind(this)} role="button"> &#10133;</a>
+                    </div>
+                        
+                </form>
               </div>
           </div>
         </div>
